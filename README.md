@@ -45,15 +45,7 @@
 		        android:layout_height="match_parent"
 		        >
 	  </RelativeLayout>
-```
-```java
- 	  <RelativeLayout 
-		        android:id="@+id/container"
-		        android:layout_width="match_parent"
-		        android:layout_height="match_parent"
-		        >
-	  </RelativeLayout>
-```
+``` 
  **activity**
 ```java
 relative=(RelativeLayout) findViewById(R.id.container); 
