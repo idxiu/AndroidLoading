@@ -1,7 +1,7 @@
 ## Demo
 ![](https://github.com/istarvip/AndroidLoading/blob/master/Demo.gif)
 
-## 使用 
+## 使用 方法一：
 
 ### Step 1
 
@@ -34,6 +34,34 @@
         findViewById(R.id.loading_icon).setVisibility(View.GONE);
    }
    
+```
+
+## 方法二：在activity里添加 
+ **布局文件**
+```java
+ 	  <RelativeLayout 
+		        android:id="@+id/container"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        >
+	  </RelativeLayout>
+```
+```java
+ 	  <RelativeLayout 
+		        android:id="@+id/container"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        >
+	  </RelativeLayout>
+```
+ **activity**
+```java
+relative=(RelativeLayout) findViewById(R.id.container); 
+	    // loading_id 在（0~27）中选择 。loading_id对应indicators的id
+	    int loading_id=22;
+		LoadingIndicatorView  load=new LoadingIndicatorView(context, loading_id);
+		//添加view
+		relative.addView(load);
 ```
 ## Indicators
 

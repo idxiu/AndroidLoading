@@ -169,17 +169,25 @@ public class LoadingIndicatorView extends View {
         super(context, attrs, defStyleAttr);
         init(attrs, defStyleAttr);
     }
-
-
+    private int loading_id=0;
+    public LoadingIndicatorView(Context context, int loading_id) {
+    	super(context);
+    	this.loading_id=loading_id;
+    	init(null, 0);
+        //init(attrs, defStyleAttr);
+    }
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public LoadingIndicatorView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(attrs, defStyleAttr);
-    }
-
+    } 
     private void init(AttributeSet attrs, int defStyle) {
         TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.LoadingIndicatorView);
-        mIndicatorId=a.getInt(R.styleable.LoadingIndicatorView_indicator, BallPulse);
+        if(loading_id!=0){ 
+        	mIndicatorId=a.getInt(R.styleable.LoadingIndicatorView_indicator, loading_id);
+        }else{ 
+        	mIndicatorId=a.getInt(R.styleable.LoadingIndicatorView_indicator, BallPulse);
+        }
         mIndicatorColor=a.getColor(R.styleable.LoadingIndicatorView_indicator_color, Color.WHITE);
         a.recycle();
         mPaint=new Paint();
