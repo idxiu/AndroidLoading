@@ -1,16 +1,13 @@
 ## Demo
-![](https://github.com/istarvip/AndroidLoading/master/Demo2.gif)
+![](https://github.com/istarvip/AndroidLoading/blob/master/Demo.gif)
 
 ## 使用 
 
 ### Step 1
 
 添加jar包在libs里
-``` nineoldandroids-2.4.0.jar
-```
-
-``` 导入AndroidLoading库到项目中
-```
+* `nineoldandroids-2.4.0.jar`
+* ` 导入AndroidLoading库到项目中` 
 
 ### Step 2
 
