@@ -37,6 +37,10 @@
 ```
 
 ## 方法二：在activity里添加 
+
+添加jar包在libs里
+* `nineoldandroids-2.4.0.jar`
+* ` 导入AndroidLoading库到项目中` 
  **布局文件**
 ```java
  	  <RelativeLayout 
@@ -54,6 +58,22 @@ relative=(RelativeLayout) findViewById(R.id.container);
 		LoadingIndicatorView  load=new LoadingIndicatorView(context, loading_id);
 		//添加view
 		relative.addView(load);
+```
+## 方法三：在activity里添加   
+添加jar包在libs里
+* `nineoldandroids-2.4.0.jar`
+* ` 导入AndroidLoading库到项目中` 
+``` 
+ **activity**
+```java
+ 1、导入包：
+ 	import cn.istarvip.loading.indicator.LoadingDialog; 
+ 2、初始化：
+ 	//Context Activity 加载图标id 在（0~27）中选择 
+ 	LoadingDialog loading = LoadingDialog.createDialog(context, this,"2");
+ 3、使用：
+ 	loading.startProgressDialog(loading);//加载中
+ 	loading.startProgressDialog(loading);//停止加载
 ```
 ## Indicators
 
