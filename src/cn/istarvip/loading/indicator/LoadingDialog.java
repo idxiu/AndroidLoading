@@ -30,6 +30,7 @@ public class LoadingDialog extends Dialog {
 	private static Context mContext;
 	// private static TextView tv;
 	private static List<LoadingDialog> allDialog;
+	static LinearLayout layout;
 	private LoadingIndicatorView load;
 	LayoutParams params;
 
@@ -66,6 +67,7 @@ public class LoadingDialog extends Dialog {
 		// tv = (TextView) loadingDialog
 		// .findViewById(R.id.id_tv_loadingmsg);
 		// tv.setText("正在拼命加载...");
+	   layout = (LinearLayout) loadingDialog.findViewById(R.id.layout); 
 		return loadingDialog;
 	}
 
@@ -80,7 +82,7 @@ public class LoadingDialog extends Dialog {
 				activity.getResources().getDimensionPixelSize(R.dimen.height));
 		params.gravity = Gravity.CENTER;
 		load.setLayoutParams(params);
-		LinearLayout layout = (LinearLayout) loadingDialog.findViewById(R.id.layout);
+		layout.removeAllViews();
 		layout.addView(load);
 	}
 

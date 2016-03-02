@@ -69,7 +69,7 @@ relative=(RelativeLayout) findViewById(R.id.container);
  1、导入包：
  	import cn.istarvip.loading.indicator.LoadingDialog; 
  2、初始化：
- 	//Context Activity 加载图标id 在（0~27）中选择 
+ 	//Context Activity 加载图标id 在（0~27）中选择 为null时默认是22
  	LoadingDialog loading = LoadingDialog.createDialog(context, this,"2");
  3、使用：
  	loading.startProgressDialog(loading);//加载中
