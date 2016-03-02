@@ -75,14 +75,14 @@ public class LoadingDialog extends Dialog {
 		if (loadingDialog == null) {
 			return;
 		}
-
+		layout.removeAllViews();
 		int id = Integer.parseInt(loading_id);
 		load = new LoadingIndicatorView(activity, id);
 		params = new LayoutParams(activity.getResources().getDimensionPixelSize(R.dimen.width),
 				activity.getResources().getDimensionPixelSize(R.dimen.height));
 		params.gravity = Gravity.CENTER;
 		load.setLayoutParams(params);
-		layout.removeAllViews();
+		
 		layout.addView(load);
 	}
 
